@@ -10,47 +10,18 @@
         android:icon="@drawable/ic_launcher"
         android:label="TurovFy"
         android:supportsRtl="true"
+        android:hardwareAccelerated="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
-        <meta-data
-            android:name="asset_statements"
-            android:value="[]" />
-
         <activity
-            android:name="com.google.androidbrowserhelper.trusted.LauncherActivity"
+            android:name=".MainActivity"
             android:exported="true"
-            android:label="TurovFy"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-
-            <meta-data
-                android:name="android.support.customtabs.trusted.DEFAULT_URL"
-                android:value="https://turovfy.duckdns.org/" />
-
-            <!-- Принудительно подключаем Samsung Internet, если установлен на телефоне -->
-            <meta-data
-                android:name="android.support.customtabs.trusted.ADDITIONAL_TRUSTED_ORIGINS"
-                android:value="https://turovfy.duckdns.org" />
-
-            <meta-data
-                android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
-                android:resource="@android:color/black" />
-
-            <meta-data
-                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR"
-                android:resource="@android:color/black" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                    android:scheme="https"
-                    android:host="turovfy.duckdns.org" />
             </intent-filter>
         </activity>
     </application>
